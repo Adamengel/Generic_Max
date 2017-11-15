@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "max.h"
+#include "minmax.h"
 
 using namespace std;
 
@@ -11,10 +11,11 @@ int main()
 	double a = 10.3, b = 2.7, c = 3.0;
 	string x = "abc", y = "ijk", z = "abcde";
 
-	cout <<"int:\n"<< max(i, j, k)<<endl;
-	cout << "double:\n"<<max(a, b, c) << endl;
-	cout << "string:\n" << max(x, y, z) << endl;
-
+	minMax minMax1(true);
+	minMax minMax2(false);
+	
+	int res = findMinMax(i, j, k, minMax1);
+	 res = findMinMax(i, j, k, minMax2);
 	system("pause");
 	return 0;
 }
